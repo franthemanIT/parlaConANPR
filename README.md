@@ -85,7 +85,7 @@ Gli script fanno uso di alcuni moduli, fra cui:
 che potrebbero non essere parte dell'installazione standard di Python. 
 Verificare di averli installati.  
 
-**Per ulteriori dettagli vedere il file requirements.txt** e *pip install -r .\requirements.txt*.
+**File requirements.txt in preparazione** (poi: *pip install -r .\requirements.txt*).
 
 # Consigli per l'uso dello script
 
