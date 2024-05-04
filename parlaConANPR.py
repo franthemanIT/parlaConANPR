@@ -32,7 +32,7 @@ BASE_URL_ANPR = "https://modipa-val.anpr.interno.it/govway/rest/in/MinInternoPor
 AUD_INTEROP = "auth.uat.interop.pagopa.it/client-assertion"
 AUD_ANPR = 'https://modipa-val.anpr.interno.it/govway/rest/in/MinInternoPortaANPR/C001-servizioNotifica/v1'
 target = "https://modipa-val.anpr.interno.it/govway/rest/in/MinInternoPortaANPR-PDND/C001-servizioNotifica/v1/anpr-service-e002"
-DURATA_TOKEN = 240 #3600 in produzione, 86400 in collaudo (in secondi)
+DURATA_TOKEN = 240 #600 in produzione (in secondi)
 
 # Ambiente di produzione
 # BASE_URL_AUTH = "https://auth.interop.pagopa.it/token.oauth2" #Ambiente PDND di produzione
@@ -40,7 +40,7 @@ DURATA_TOKEN = 240 #3600 in produzione, 86400 in collaudo (in secondi)
 # target = "https://modipa.anpr.interno.it/govway/rest/in/MinInternoPortaANPR-PDND/C001–servizioNotifica/v1/anpr-service-e002"
 # AUD_INTEROP = "auth.interop.pagopa.it/client-assertion"
 # AUD_ANPR = 'https://modipa-val.anpr.interno.it/govway/rest/in/MinInternoPortaANPR/C001-servizioNotifica/v1'
-# DURATA_TOKEN = 240 #3600 in produzione, 86400 in collaudo (in secondi)
+# DURATA_TOKEN = 240 #600 in produzione, 86400 in collaudo (in secondi)
 
 #nome del file di log generale
 LOG_FILE_NAME="ANPR.log"
@@ -501,7 +501,7 @@ def estrai_residenza_id(token, contatore, idanpr, data, motivo, client_id, audie
     with open(LOG_FILE_NAME, "a+") as log_file:
         request_time=timestamp()
         log_request(
-            log_file, request_time, "GET", "estrai", "richiesti dati per ID ANPR"+idanpr[:3]+"***"+" idOp "+str(contatore)
+            log_file, request_time, "GET", "estrai", "richiesti dati per ID ANPR "+idanpr[:3]+"***"+" idOp "+str(contatore)
             )
         r = requests.post(url, data = body.encode('UTF-8'), headers = headers, verify = False)
         response_time=timestamp()
