@@ -32,15 +32,18 @@ BASE_URL_ANPR = "https://modipa-val.anpr.interno.it/govway/rest/in/MinInternoPor
 AUD_INTEROP = "auth.uat.interop.pagopa.it/client-assertion"
 AUD_ANPR = 'https://modipa-val.anpr.interno.it/govway/rest/in/MinInternoPortaANPR/C001-servizioNotifica/v1'
 target = "https://modipa-val.anpr.interno.it/govway/rest/in/MinInternoPortaANPR-PDND/C001-servizioNotifica/v1/anpr-service-e002"
-DURATA_TOKEN = 600 #600 in produzione (in secondi)
+DURATA_TOKEN = 600 #600 in collaudo e produzione (in secondi)
 
 # Ambiente di produzione
+##########
+## ATTENZIONE: per usare in ambiente di produzione cambiare verify = False in verify = True nelle funzioni estrai_residenza_*
+############
 # BASE_URL_AUTH = "https://auth.interop.pagopa.it/token.oauth2" #Ambiente PDND di produzione
-# BASE_URL_ANPR = "https://modipa.anpr.interno.it/govway/rest/in/MinInternoPortaANPR-PDND/C001–servizioNotifica/v1"
-# target = "https://modipa.anpr.interno.it/govway/rest/in/MinInternoPortaANPR-PDND/C001–servizioNotifica/v1/anpr-service-e002"
+# BASE_URL_ANPR = "https://modipa.anpr.interno.it/govway/rest/in/MinInternoPortaANPR-PDND/C001-servizioNotifica/v1"
+# target = "https://modipa.anpr.interno.it/govway/rest/in/MinInternoPortaANPR-PDND/C001-servizioNotifica/v1/anpr-service-e002"
 # AUD_INTEROP = "auth.interop.pagopa.it/client-assertion"
-# AUD_ANPR = 'https://modipa-val.anpr.interno.it/govway/rest/in/MinInternoPortaANPR/C001-servizioNotifica/v1'
-# DURATA_TOKEN = 600 #600 in produzione, 86400 in collaudo (in secondi)
+# AUD_ANPR = 'https://modipa.anpr.interno.it/govway/rest/in/MinInternoPortaANPR/C001-servizioNotifica/v1'
+# DURATA_TOKEN = 600 #600 in collaudo e in produzione (in secondi)
 
 #nome del file di log generale
 LOG_FILE_NAME="ANPR.log"
