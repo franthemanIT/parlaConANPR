@@ -132,13 +132,13 @@ def chiedi_sesso():
     return x.upper()
 
 ## Funzioni che servono per la manipolazione di file di input e output
-def crea_cartella(descrizione, data_e_ora=timestamp_breve()):
-    '''Crea una sottocartella nella cartella di esecuzione dello script
-    Se l'argomento data_e_ora è nullo, usa un timestamp breve al suo posto.'''
-    path="./lotti/" + data_e_ora + "-" + descrizione + "/"
-    if not os.path.isdir(path):
-        os.mkdir(path)
-    return path
+# def crea_cartella(descrizione, data_e_ora=timestamp_breve()):
+    # '''Crea una sottocartella nella cartella di esecuzione dello script
+    # Se l'argomento data_e_ora è nullo, usa un timestamp breve al suo posto.'''
+    # path="./lotti/" + data_e_ora + "-" + descrizione + "/"
+    # if not os.path.isdir(path):
+        # os.mkdir(path)
+    # return path
 
 def salva_dizionario(dizionario, file_out):
     '''Salva un dizionario in un file JSON'''
@@ -643,8 +643,6 @@ def ottieni_token(file, chiave):
 ### INSTALLAZIONE AL PRIMO AVVIO ####
 #####################################
 print("Benvenuto "+CALLING_USER+".")
-if os.path.exists("lotti/") is False:
-    os.mkdir("./lotti/")
 if os.path.exists("ANPR.cfg") is False:
     CONFIGURATO = False
     print("Il programma non è configurato.")
