@@ -32,7 +32,7 @@ BASE_URL_ANPR = "https://modipa-val.anpr.interno.it/govway/rest/in/MinInternoPor
 AUD_INTEROP = "auth.uat.interop.pagopa.it/client-assertion"
 AUD_ANPR = 'https://modipa-val.anpr.interno.it/govway/rest/in/MinInternoPortaANPR/C001-servizioNotifica/v1'
 target = "https://modipa-val.anpr.interno.it/govway/rest/in/MinInternoPortaANPR-PDND/C001-servizioNotifica/v1/anpr-service-e002"
-DURATA_TOKEN = 240 #600 in produzione (in secondi)
+DURATA_TOKEN = 600 #600 in produzione (in secondi)
 
 # Ambiente di produzione
 # BASE_URL_AUTH = "https://auth.interop.pagopa.it/token.oauth2" #Ambiente PDND di produzione
@@ -40,7 +40,7 @@ DURATA_TOKEN = 240 #600 in produzione (in secondi)
 # target = "https://modipa.anpr.interno.it/govway/rest/in/MinInternoPortaANPR-PDND/C001–servizioNotifica/v1/anpr-service-e002"
 # AUD_INTEROP = "auth.interop.pagopa.it/client-assertion"
 # AUD_ANPR = 'https://modipa-val.anpr.interno.it/govway/rest/in/MinInternoPortaANPR/C001-servizioNotifica/v1'
-# DURATA_TOKEN = 240 #600 in produzione, 86400 in collaudo (in secondi)
+# DURATA_TOKEN = 600 #600 in produzione, 86400 in collaudo (in secondi)
 
 #nome del file di log generale
 LOG_FILE_NAME="ANPR.log"
@@ -596,7 +596,7 @@ def ottieni_token(file, chiave):
                 tokenDict = decifra_dizionario(file, chiave)
                 allora = datetime.datetime.strptime(tokenDict["creato"], "%a, %d %b %Y %H:%M:%S %Z")
                 adesso = datetime.datetime.utcnow()
-                if int((adesso - allora).total_seconds()) < (DURATA_TOKEN-60):
+                if int((adesso - allora).total_seconds()) < (DURATA_TOKEN-30):
                     token = tokenDict["token"]
                     print("Token valido.")
                     TOKEN_DISPONIBILE = True
