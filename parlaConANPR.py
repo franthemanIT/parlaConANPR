@@ -94,7 +94,7 @@ def chiedi_cf():
             ottieni_cf = True
         else:
             print("Codice fiscale non valido.")
-    return x
+    return x.upper()
 
 def chiedi_data():
     '''Chiede di inserire una data G/M/A o G-M-A
@@ -121,7 +121,7 @@ def chiedi_idanpr():
             ottieni_idanpr = True
         else:
             print("ID ANPR non valido.")
-    return x
+    return x.upper()
     
 def chiedi_sesso():
     '''Chiede di inserire un sesso M o F.'''
