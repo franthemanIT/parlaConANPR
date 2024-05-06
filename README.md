@@ -6,7 +6,9 @@
 # Descrizione
 Script Python **didattico** per interagire con il servizio C001 (Notifica) di ANPR, l'Anagrafe Nazionale della Popolazione Residente, tramite la PDND (Piattaforma Digitale Nazionale Dati).  
 Lo script funziona nell'**ambiente di collaudo** e nell'**ambiente di produzione** di PDND e di INAD.  
-Per l'uso in ambiente di produzione è sufficiente cambiare il valore delle variabili degli endpoint di PDND e ANPR.  
+Per l'**uso in ambiente di produzione** è sufficiente:
+- cambiare il valore delle variabili degli endpoint di PDND e ANPR (commentare e decommentare le rispettive righe);
+- sostiture 'verify = False' con 'verify = True' nelle chiamate requests delle funzioni estrai_residenza(_*) [un "trova e sostituisci" fa il suo lavoro)  
 
 L'interazione avviene tramite riga di comando. Anche la configurazione, al primo avvio, è interattiva da riga di comando. I dati di configurazione sono cifrati e per avviare lo script occorre una password (vedi sotto).
 
