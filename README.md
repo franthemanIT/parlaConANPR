@@ -73,6 +73,8 @@ Le specifiche delle API di ANPR sono disponibili direttamente su PDND. Nella car
 Per visualizzarle in modo più comprensibile si può caricare il fiel YAML su https://editor.swagger.io/ (come link o come upload).  
 Personalmente non ho trovato le specifiche del tutto esaustive, per esempio sull'indicazione dei campi obbligatori e sui valori accettati per alcuni campi (maiuscolo/minuscolo, lista di valori ammessi).
 
+La circolare del Ministero dell'interno (DAIT) con le linee guida per l'accesso ai dati ANPR da parte degli uffici comunali è la n. 73 del 31 maggio 2023: [https://dait.interno.gov.it/servizi-demografici/circolari/circolare-dait-n73-del-31-maggio-2023](https://dait.interno.gov.it/servizi-demografici/circolari/circolare-dait-n73-del-31-maggio-2023) (il link potrebbe non funzionare, fai copia e incolla oppure cercala manualmente).
+
 ATTENZIONE: come restituito in coda alle interrogazioni, il decreto del Ministero dell'interno 3 marzo 2023 (art.3 comma 3) prevede che la consultazione di ANPR avvenga esclusivamente con identificativo unico nazionale (ID ANPR). Probabilmente, a breve, le interrogazioni traite codice fiscale o dati anagrafici di base non saranno più possibili. Questo renderà probabilmente inutilizzabili gli e-service di ANPR per la maggior parte dei casi d'uso (se ho l'ID ANPR di un soggetto probabilmente conosco anche la sua residenza).
 
 # Prerequisiti Python
